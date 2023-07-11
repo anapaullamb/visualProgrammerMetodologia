@@ -1,0 +1,927 @@
+{
+	"info": {
+		"_postman_id": "5373a2c9-a36b-4c25-aea7-c4f769db44ba",
+		"name": "VisualProgrammer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13861419"
+	},
+	"item": [
+		{
+			"name": "Dominio",
+			"item": [
+				{
+					"name": "Listar Sexo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/dominio/sexo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"dominio",
+								"sexo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Tipo Escolaridade",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/dominio/tipoEscolaridade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"dominio",
+								"tipoEscolaridade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/dominio/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"dominio",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Materia",
+			"item": [
+				{
+					"name": "Exercicio",
+					"item": [
+						{
+							"name": "Cadastrar Exercicio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Joao e Maria\",\r\n    \"enunciado\": \"Joao e Maria tem tres frutinhas, que vao andar dez vezes. Quantas vezes no total foram andadas?\",\r\n    \"codigoResposta\": \"aaaaaaaaaa\",\r\n    \"testesUnitarios\": [\r\n        {\r\n            \"entrada\": \"10\",\r\n            \"saida\": \"20\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/visual/programmer/materia/1/exercicio",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"visual",
+										"programmer",
+										"materia",
+										"1",
+										"exercicio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Exercicio",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Joao e Maria\",\r\n    \"enunciado\": \"Joao e Maria tem tres frutinhas, que vao andar dez vezes. Quantas vezes no total foram andadas?\",\r\n    \"codigoResposta\": \"aaaaaaaaaa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/visual/programmer/materia/exercicio/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"visual",
+										"programmer",
+										"materia",
+										"exercicio",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Exercicio",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/visual/programmer/materia/exercicio/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"visual",
+										"programmer",
+										"materia",
+										"exercicio",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Teste Unitario",
+					"item": [
+						{
+							"name": "Cadastrar Teste Unitario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entrada\": \"11\",\r\n    \"saida\": \"20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/visual/programmer/materia/exercicio/2/testeUnitario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"visual",
+										"programmer",
+										"materia",
+										"exercicio",
+										"2",
+										"testeUnitario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Teste Unitario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entrada\": \"11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/visual/programmer/materia/exercicio/testeUnitario/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"visual",
+										"programmer",
+										"materia",
+										"exercicio",
+										"testeUnitario",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Teste Unitario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/visual/programmer/materia/exercicio/testeUnitario/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"visual",
+										"programmer",
+										"materia",
+										"exercicio",
+										"testeUnitario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Buscar Materia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/materia/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"materia",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Materia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Ponteiros\",\r\n    \"conteudo\": \"dsasa\",\r\n    \"exercicios\": [{\r\n        \"titulo\": \"Dez irmãs\",\r\n        \"enunciado\": \"Dez irmãs com um sanduiche\",\r\n        \"codigoResposta\": \"cccccccccc\",\r\n        \"testesUnitarios\":[\r\n            {\r\n                \"entrada\": \"66\",\r\n                \"saida\": \"32\"\r\n            }\r\n        ]\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/materia/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"materia",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Materia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Comandos e Operadores de Condição\",\r\n    \"conteudo\": \"Introdução Os comandos de condição permitem, ao programador, efetuar testes que determinam quais ações devem ser executadas pelo código-fonte escrito. Neste contexto, torna-se possível definir, em tempo de execução, qual fluxo de código deve ser seguido, de acordo com os dados de entrada informados pelo usuário. Exemplo Prático de Uso Imagine que um aplicativo simples de cadastro de produtos está sendo codificado, onde o usuário pode: inserir, alterar, remover e visualizar produtos. Para que seja possível ao usuário efetuar sua escolha, normalmente utilizamos um menu inicial que apresenta todas essas opções. Neste contexto, o trecho de código-fonte que deve ser executado, só será identificado em tempo em execução, ou seja, quando o usuário escolher uma dentre as quatro opções. A partir da opção escolhida, o código-fonte deve ser capaz de identificar tal escolha e executar o trecho de código que contém a funcionalidade vinculada a ela. Estes testes condicionais, para identificação de determinadas situações, são feitos pelos comandos e operadores de condição; Comandos de Condição O primeiro comando de condição, e também o mais básico, presente em praticamente todas as linguagens de programação, é o if(). O if() ou se() (tradução para o português) permite especificar, dentro dos seus parênteses, condições (verificações) que desejamos aplicar ao nosso código-fonte. O comando if() possui como estrutura básica:\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/materia/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"materia",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Materia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/materia/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"materia",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Materias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/materia/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"materia",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Materias Disponiveis",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/materia/pessoa/18/disponiveis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"materia",
+								"pessoa",
+								"18",
+								"disponiveis"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Remover Pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/pessoa/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"pessoa",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ana Carolina\",\r\n    \"sobrenome\": \"Vanhoni\",\r\n    \"dataNascimento\": \"2002-10-07\",\r\n    \"email\": \"anavanhoni@gmail.com\",\r\n    \"senha\": \"sasaas\",\r\n    \"pais\": \"BR\",\r\n    \"uf\": \"PR\",\r\n    \"cidade\": \"Paranagua\",\r\n    \"tipoEscolaridade\": {\r\n        \"id\": 8\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/pessoa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sexo\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/pessoa/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"pessoa",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pessoas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/pessoa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pessoa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/pessoa/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"pessoa",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pessoa Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/pessoa/email/anavanhoni@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"pessoa",
+								"email",
+								"anavanhoni@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inscricao",
+			"item": [
+				{
+					"name": "Listar incricoes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/inscricao/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"inscricao",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Materias Inscritas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/inscricao/pessoa/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"inscricao",
+								"pessoa",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Inscricao",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/inscricao/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"inscricao",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Realizar Inscricao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/demo/pessoa/18/materia/2/inscricao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"demo",
+								"pessoa",
+								"18",
+								"materia",
+								"2",
+								"inscricao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finaliza Inscricao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/demo/inscricao/7/finalizarInscricao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"demo",
+								"inscricao",
+								"7",
+								"finalizarInscricao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar Inscricao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/inscricao/17/cancelar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"inscricao",
+								"17",
+								"cancelar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Registro Inscricao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/inscricao/14/exercicio/17/registroExercicio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"inscricao",
+								"14",
+								"exercicio",
+								"17",
+								"registroExercicio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Registro Inscricao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"finalizado\": true,\r\n    \"tempo\": \"00:10:01\",\r\n    \"codigo\": \"printfff{}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/visual/programmer/inscricao/17/registroExercicio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visual",
+								"programmer",
+								"inscricao",
+								"17",
+								"registroExercicio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
